@@ -106,7 +106,41 @@
 		$('.seasons a').click(function(e){//find all a tags inside class of seasons
             e.preventDefault();//stop default submission
 			var season = $(this).attr("href");//contents of href attribute of this element
-			alert(season);
+			//alert(season);
+			
+			season = season.toLowerCase();
+			
+			switch(season){
+			
+				case 'spring'
+					$('main header h3').html("Blossom this Spring with our new colors!");
+					$('#logo').attr('src','images/spring.gif');
+					$('#wear').attr('src','images/spring-wear.jpg');
+					$('html').css("background-color","#E6E6FA");
+				break;
+
+				case 'summer'
+					$('main header h3').html("Shine bright this summer with our hot styles");
+					$('#logo').attr('src','images/summer.gif');
+					$('#wear').attr('src','images/summer-wear.jpg');
+					$('html').css("background-color","#FFFF00");
+				break;
+
+				case 'winter'
+					$('main header h3').html("Keep cozy in our new Winter selection!");
+					$('#logo').attr('src','images/winter.gif');
+					$('#wear').attr('src','images/winter-wear.jpg');
+					$('html').css("background-color","#c9dfe3");
+				break;
+
+				case 'fall'
+					$('main header h3').html("Renew your wardrobe this Autumn!");
+					$('#logo').attr('src','images/fall.gif');
+					$('#wear').attr('src','images/fall-wear.jpg');
+					$('html').css("background-color","#FFA500");
+				break;
+
+			}
 		});
 	});
     </script>
